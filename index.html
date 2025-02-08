@@ -5,275 +5,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>G.I.S World Cars</title>
       <link rel="icon" href="favicon/favicon-32x32.png" type="image/x-icon">
-      <style>
-         body {
-         font-family: Arial, sans-serif;
-         margin: 0;
-         padding: 0;
-         }
-         header {
-         background-color: #cc0001;
-         color: white;
-         text-align: center;
-         padding: 20px;
-         }
-         header img {
-         max-width: 100%;
-         height: auto;
-         }
-         nav {
-         display: flex;
-         justify-content: center;
-         background-color: #cc0001;
-         padding: 10px 0;
-         }
-         nav a {
-         color: white;
-         margin: 0 15px;
-         text-decoration: none;
-         }
-         nav a:hover {
-         text-decoration: underline;
-         }
-         section {
-         padding: 20px;
-         margin: 10px auto;
-         max-width: 800px;
-         }
-         #sobre-nosotros {
-         background-color: #f9f9f9;
-         }
-         #sobre-nosotros div {
-         display: flex;
-         align-items: center;
-         gap: 20px;
-         margin-bottom: 20px;
-         }
-         #sobre-nosotros div:nth-child(even) {
-         flex-direction: row-reverse;
-         }
-         #sobre-nosotros img {
-         max-width: 40%;
-         height: auto;
-         border-radius: 10px;
-         }
-         #sobre-nosotros strong{
-         color:#cc0001;
-         }
-         #servicios {
-         text-align: center;
-         padding: 20px;
-         }
-         #servicios h2 {
-         font-size: 2em;
-         margin-bottom: 20px;
-         }
-         #servicios ul {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         gap: 16px;
-         list-style: none;
-         padding: 0;
-         margin: 0;
-         }
-         #servicios li {
-         background-color: #fff;
-         border: 1px solid #ccc;
-         border-radius: 8px;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         padding: 20px;
-         width: calc(33.33% - 16px); 
-         box-sizing: border-box;
-         }
-         #servicios li:nth-child(4),
-         #servicios li:nth-child(5) {
-         width: calc(33.33% - 16px);
-         margin-left: 8%; 
-         }
-         #servicios li h3 {
-         margin-top: 0;
-         color:#cc0001;
-         }
-         #servicios li p {
-         margin: 10px 0 0;
-         }
-         #presupuestos {
-         background-color: #f9f9f9;
-         text-align: center;
-         }
-         #presupuestos .accordion {
-         margin: 10px 0;
-         border: 1px solid #ccc;
-         border-radius: 5px;
-         overflow: hidden;
-         background-color: #fff;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         }
-         .accordion h3 {
-         margin: 0;
-         padding: 15px;
-         background-color: #cc0001;
-         color: white;
-         cursor: pointer;
-         }
-         .accordion div {
-         padding: 15px;
-         display: none;
-         }
-         #contacto {
-         max-width: 800px;
-         margin: 0 auto;
-         padding: 20px;
-         background-color: #fff;
-         border-radius: 10px;
-         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-         }
-         #contacto h2 {
-         text-align: center;
-         font-size: 2em;
-         color: #333;
-         margin-bottom: 20px;
-         font-family: 'Arial', sans-serif;
-         }
-         #contacto p {
-         text-align: center;
-         font-size: 1.1em;
-         color: #000000;
-         margin-bottom: 20px;
-         font-family: 'Arial', sans-serif;
-         }
-         .contact-item {
-         margin-bottom: 20px;
-         }
-         .contact-item h3 {
-         font-size: 1.5em;
-         color: #333;
-         margin-bottom: 10px;
-         font-family: 'Arial', sans-serif;
-         }
-         .contact-item a {
-         font-size: 1.1em;
-         color: #cc0001;
-         text-decoration: none;
-         }
-         .contact-item a:hover {
-         text-decoration: underline;
-         }
-         form {
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         max-width: 600px;
-         margin: 0 auto;
-         padding: 20px;
-         background-color: #f9f9f9;
-         border-radius: 10px;
-         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-         }
-         form label {
-         font-size: 1.1em;
-         color: #333;
-         margin: 10px 0 5px;
-         font-family: 'Arial', sans-serif;
-         }
-         form input, form textarea {
-         padding: 12px;
-         margin-bottom: 20px;
-         border: 1px solid #ccc;
-         border-radius: 8px;
-         font-size: 1em;
-         font-family: 'Arial', sans-serif;
-         transition: border-color 0.3s ease, box-shadow 0.3s ease;
-         }
-         form input:focus, form textarea:focus {
-         border-color: #cc0001;
-         box-shadow: 0 0 5px rgba(204, 0, 1, 0.5);
-         outline: none;
-         }
-         form textarea {
-         resize: vertical;
-         min-height: 100px;
-         }
-         form button {
-         background-color: #cc0001;
-         color: white;
-         padding: 12px;
-         border: none;
-         border-radius: 8px;
-         font-size: 1.1em;
-         cursor: pointer;
-         transition: background-color 0.3s ease, transform 0.2s ease;
-         }
-         form button:hover {
-         background-color: #990001;
-         transform: translateY(-2px);
-         }
-         form button:active {
-         background-color: #660000;
-         transform: translateY(2px);
-         }
+      <link rel="stylesheet" href="css/index.css">
 
-        @media screen and (max-width: 768px) {
-            #servicios li {
-                width: calc(50% - 16px);
-            }
-
-            #sobre-nosotros div {
-                flex-direction: column;
-            }
-
-            #sobre-nosotros img {
-                max-width: 80%;
-                margin-bottom: 20px;
-            }
-
-            #servicios h2 {
-                font-size: 1.5em;
-            }
-
-            #contacto h2 {
-                font-size: 1.8em;
-            }
-
-            form {
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            nav {
-                flex-direction: column;
-                padding: 10px;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            #servicios li {
-                width: 100%;
-            }
-
-            #sobre-nosotros img {
-                max-width: 90%;
-            }
-
-            form label {
-                font-size: 1em;
-            }
-
-            form input, form textarea {
-                font-size: 0.9em;
-            }
-
-            form button {
-                font-size: 1em;
-                padding: 10px;
-            }
-        }
-      </style>
    </head>
    <body>
       <header>
@@ -394,6 +127,7 @@
             </div>
          </div>
       </section>
+      <div id="message" class="message"></div>
       <section id="contacto">
          <h2>Contacto</h2>
          <p>¿Necesitas ayuda? Contáctanos a través de cualquiera de los siguientes medios:</p>
@@ -401,17 +135,59 @@
             <p><a href="tel:+34654124839">+34 654 124 839</a></p>
             <p><a href="tel:+34652179364">+34 652 179 364</a></p>
          </div>
-         <form action="enviar.php" method="POST">
+         <form action="https://formspree.io/f/myzkpnlw" method="POST" id="contact-form">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
+         
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+         
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+         
+            <input type="hidden" name="_subject" value="Nuevo mensaje de contacto">
+         
             <button type="submit">Enviar</button>
          </form>
+        
       </section>
       <script>
+
+         function showMessage(message, type) {
+            $message.textContent = message;
+            $message.className = `message ${type}`;
+            $message.style.display = 'block';
+
+            setTimeout(() => {
+               $message.style.display = 'none'; 
+            }, 5000); 
+         }
+
+
+         const $form = document.getElementById('contact-form');
+         const $message = document.getElementById('message');
+
+         $form.addEventListener('submit', handlesubmit)  
+
+         async function handlesubmit(event) {
+             event.preventDefault();
+             const form = new FormData(this);
+             const response = await fetch(this.action,{
+                 method: this.method,
+                 body: form,
+                 headers: {
+                     'Accept': 'application/json'
+                 }
+             });
+             if(response.ok) {
+                 this.reset();
+                 showMessage('Gracias por contactarnos. Nos comunicaremos con usted a la mayor brevedad posible.', 'success');
+             } else{
+               this.reset();
+               showMessage('Ocurrió un error, por favor intentelo de nuevo', 'error');
+             }
+            }
+
          function toggleAccordion(header) {
              const content = header.nextElementSibling;
              const isOpen = content.style.display === 'block';
