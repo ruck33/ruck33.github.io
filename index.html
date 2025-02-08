@@ -1,11 +1,423 @@
 <!DOCTYPE html>
-
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<h1>!Hola mundo <!/h1>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>G.I.S World Cars</title>
+      <link rel="icon" href="favicon/favicon-32x32.png" type="image/x-icon">
+      <style>
+         body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         }
+         header {
+         background-color: #cc0001;
+         color: white;
+         text-align: center;
+         padding: 20px;
+         }
+         header img {
+         max-width: 100%;
+         height: auto;
+         }
+         nav {
+         display: flex;
+         justify-content: center;
+         background-color: #cc0001;
+         padding: 10px 0;
+         }
+         nav a {
+         color: white;
+         margin: 0 15px;
+         text-decoration: none;
+         }
+         nav a:hover {
+         text-decoration: underline;
+         }
+         section {
+         padding: 20px;
+         margin: 10px auto;
+         max-width: 800px;
+         }
+         #sobre-nosotros {
+         background-color: #f9f9f9;
+         }
+         #sobre-nosotros div {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+         margin-bottom: 20px;
+         }
+         #sobre-nosotros div:nth-child(even) {
+         flex-direction: row-reverse;
+         }
+         #sobre-nosotros img {
+         max-width: 40%;
+         height: auto;
+         border-radius: 10px;
+         }
+         #sobre-nosotros strong{
+         color:#cc0001;
+         }
+         #servicios {
+         text-align: center;
+         padding: 20px;
+         }
+         #servicios h2 {
+         font-size: 2em;
+         margin-bottom: 20px;
+         }
+         #servicios ul {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 16px;
+         list-style: none;
+         padding: 0;
+         margin: 0;
+         }
+         #servicios li {
+         background-color: #fff;
+         border: 1px solid #ccc;
+         border-radius: 8px;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         padding: 20px;
+         width: calc(33.33% - 16px); 
+         box-sizing: border-box;
+         }
+         #servicios li:nth-child(4),
+         #servicios li:nth-child(5) {
+         width: calc(33.33% - 16px);
+         margin-left: 8%; 
+         }
+         #servicios li h3 {
+         margin-top: 0;
+         color:#cc0001;
+         }
+         #servicios li p {
+         margin: 10px 0 0;
+         }
+         #presupuestos {
+         background-color: #f9f9f9;
+         text-align: center;
+         }
+         #presupuestos .accordion {
+         margin: 10px 0;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         overflow: hidden;
+         background-color: #fff;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         }
+         .accordion h3 {
+         margin: 0;
+         padding: 15px;
+         background-color: #cc0001;
+         color: white;
+         cursor: pointer;
+         }
+         .accordion div {
+         padding: 15px;
+         display: none;
+         }
+         #contacto {
+         max-width: 800px;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         }
+         #contacto h2 {
+         text-align: center;
+         font-size: 2em;
+         color: #333;
+         margin-bottom: 20px;
+         font-family: 'Arial', sans-serif;
+         }
+         #contacto p {
+         text-align: center;
+         font-size: 1.1em;
+         color: #000000;
+         margin-bottom: 20px;
+         font-family: 'Arial', sans-serif;
+         }
+         .contact-item {
+         margin-bottom: 20px;
+         }
+         .contact-item h3 {
+         font-size: 1.5em;
+         color: #333;
+         margin-bottom: 10px;
+         font-family: 'Arial', sans-serif;
+         }
+         .contact-item a {
+         font-size: 1.1em;
+         color: #cc0001;
+         text-decoration: none;
+         }
+         .contact-item a:hover {
+         text-decoration: underline;
+         }
+         form {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         max-width: 600px;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #f9f9f9;
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         }
+         form label {
+         font-size: 1.1em;
+         color: #333;
+         margin: 10px 0 5px;
+         font-family: 'Arial', sans-serif;
+         }
+         form input, form textarea {
+         padding: 12px;
+         margin-bottom: 20px;
+         border: 1px solid #ccc;
+         border-radius: 8px;
+         font-size: 1em;
+         font-family: 'Arial', sans-serif;
+         transition: border-color 0.3s ease, box-shadow 0.3s ease;
+         }
+         form input:focus, form textarea:focus {
+         border-color: #cc0001;
+         box-shadow: 0 0 5px rgba(204, 0, 1, 0.5);
+         outline: none;
+         }
+         form textarea {
+         resize: vertical;
+         min-height: 100px;
+         }
+         form button {
+         background-color: #cc0001;
+         color: white;
+         padding: 12px;
+         border: none;
+         border-radius: 8px;
+         font-size: 1.1em;
+         cursor: pointer;
+         transition: background-color 0.3s ease, transform 0.2s ease;
+         }
+         form button:hover {
+         background-color: #990001;
+         transform: translateY(-2px);
+         }
+         form button:active {
+         background-color: #660000;
+         transform: translateY(2px);
+         }
+
+        @media screen and (max-width: 768px) {
+            #servicios li {
+                width: calc(50% - 16px);
+            }
+
+            #sobre-nosotros div {
+                flex-direction: column;
+            }
+
+            #sobre-nosotros img {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            #servicios h2 {
+                font-size: 1.5em;
+            }
+
+            #contacto h2 {
+                font-size: 1.8em;
+            }
+
+            form {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #servicios li {
+                width: 100%;
+            }
+
+            #sobre-nosotros img {
+                max-width: 90%;
+            }
+
+            form label {
+                font-size: 1em;
+            }
+
+            form input, form textarea {
+                font-size: 0.9em;
+            }
+
+            form button {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+      </style>
+   </head>
+   <body>
+      <header>
+         <img src="imagenes/logoworldcars.png" alt="Imagen de Encabezado">
+      </header>
+      <nav>
+        <strong>
+         <a href="#sobre-nosotros">Sobre Nosotros</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#presupuestos">Presupuestos</a>
+         <a href="#contacto">Contacto</a>
+        </strong>
+      </nav>
+      <section id="sobre-nosotros">
+         <h2>Sobre Nosotros</h2>
+         <div>
+            <img src="imagenes/reconocimientooptico.png" alt="Imagen Sobre Nosotros">
+            <p>                Nos especializamos en servicios automotrices, respaldados por un equipo de profesionales, 
+               muchos provenientes de los <strong>Cuerpos y Fuerzas de Seguridad del Estado</strong>.
+         </div>
+         <div>
+            <img src="imagenes/coche.png" alt="Imagen Sobre Nosotros">
+            <p>                Gestionamos denuncias por <strong>apropiación indebida</strong>, contactamos al responsable 
+               y procedemos a la <strong>recuperación del vehículo</strong>. 
+               Posteriormente, informamos a las autoridades y realizamos los trámites correspondientes.
+            </p>
+            </p>
+         </div>
+      </section>
+      <section id="servicios">
+         <h2>Servicios</h2>
+         <ul>
+            <li>
+               <h3>Recuperación de Vehículos</h3>
+               <p>                        Nuestro sistema se dedica a la recuperación de vehículos robados o apropiados indebidamente. 
+                  Gestionamos la denuncia por apropiación indebida y realizamos las gestiones necesarias.
+               </p>
+            </li>
+            <li>
+               <h3>Reconocimiento Óptico</h3>
+               <p>                        Sistema de reconocimiento óptico de matrículas para detectar vehículos robados en calles, aparcamientos 
+                  y fronteras. Incluye toda la tramitación necesaria.
+               </p>
+            </li>
+            <li>
+               <h3>Retroquelado</h3>
+               <p>                        Nos encargamos del retroquelado en caso de bastidores falsificados, gestionando los permisos y la 
+                  documentación en menos de un mes.
+               </p>
+            </li>
+            <li>
+               <h3>Gestión de Cobros</h3>
+               <p>                        Realizamos el papeleo necesario para la reclamación de cantidades adeudadas, ya sea por impago de 
+                  recibos o cuotas.
+               </p>
+            </li>
+            <li >
+               <h3>Otros Servicios</h3>
+               <ul class="otros-servicios">
+                  <p>Localización de diligencias por accidentes de tráfico.</p>
+                  <p>Informes de robos antes de indemnización.</p>
+                  <p>Servicio de grúa propia para traslados de vehículos.
+                  <p>
+               </ul>
+            </li>
+         </ul>
+      </section>
+      <section id="presupuestos">
+         <div class="accordion">
+            <h3 onclick="toggleAccordion(this)">General</h3>
+            <div>
+               <ul>
+                  <li><strong>Atestados</strong></li>
+                  <li><strong>Informes de domicilio</strong></li>
+                  <li><strong>Informes de cotos</strong></li>
+                  <li><strong>Informe mercantil</strong></li>
+                  <li><strong>Informe de la propiedad</strong></li>
+                  <li><strong>Presentación de documentos en ayuntamiento</strong></li>
+                  <li><strong>Tráficos especiales</strong></li>
+               </ul>
+            </div>
+         </div>
+         <div class="accordion">
+            <h3 onclick="toggleAccordion(this)">Recuperación de Vehículos</h3>
+            <div>
+               <ul>
+                  <li>
+                     <strong>Localización de vehículos</strong>
+                  </li>
+                  <li><strong>Gestiones localización de vehículo</strong></li>
+                  <li><strong>Recuperación y almacenamiento de piezas</strong></li>
+               </ul>
+            </div>
+            <div class="card-column">
+               <ul>
+                  <li><strong>Informe previo a la indemnización</strong></li>
+               </ul>
+               <p style="font-size:10px;">Incluidas todas las tasas para la confección del informe</p>
+            </div>
+         </div>
+         <div class="accordion">
+            <h3 onclick="toggleAccordion(this)">Retroquelos y Servicios Especiales</h3>
+            <div>
+               <ul>
+                  <li><strong>Retroquelado de vehículo</strong></li>
+                  <li><strong>Altas y bajas de tráfico</strong></li>
+               </ul>
+            </div>
+            <div class="card-column">
+               <ul>
+               <li><strong>Gestión de vehículos en el extranjero</strong></li>
+            </div>
+         </div>
+         <div class="accordion">
+            <h3 onclick="toggleAccordion(this)">Transporte de Vehículo</h3>
+            <div>
+               <strong>Servicio de grúa nacional e internacional</strong> 
+            </div>
+         </div>
+      </section>
+      <section id="contacto">
+         <h2>Contacto</h2>
+         <p>¿Necesitas ayuda? Contáctanos a través de cualquiera de los siguientes medios:</p>
+         <div class="contact-item">
+            <p><a href="tel:+34654124839">+34 654 124 839</a></p>
+            <p><a href="tel:+34652179364">+34 652 179 364</a></p>
+         </div>
+         <form action="enviar.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+         </form>
+      </section>
+      <script>
+         function toggleAccordion(header) {
+             const content = header.nextElementSibling;
+             const isOpen = content.style.display === 'block';
+             document.querySelectorAll('.accordion div').forEach(div => div.style.display = 'none');
+             content.style.display = isOpen ? 'none' : 'block';
+         }
+      </script>
+   </body>
 </html>
